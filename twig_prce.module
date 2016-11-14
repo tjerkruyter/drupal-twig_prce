@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains twig_prce.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function twig_prce_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the render_menu module.
+    case 'help.page.twig_prce':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('PRCE for in twig templates') . '</p>';
+      return $output;
+
+    default:
+  }
+}
